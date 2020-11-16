@@ -3,48 +3,73 @@ import jsonschema
 from jsonschema import validate
 
 Automate = {
- 
- 	"title":"Automate",
- 	"type":"object",
- 	"properties":{
 
- 		"numeroUnite":{
-         "description":"cle unite",
-         "type":"integer"
+    "title": "Automate",
+    "type": "object",
+    "properties": {
 
-      },
-      "numéroAutomate":{
-         "description":"identifiant Automate",
-         "type":"integer"
-      },
-      "typeAutomate":{
-         "description":"identifiant type",
-         "type":"integer"
-      },
-       "temperatureCuve":{
-         "description":"temp cuve",
-         "type":"float"
-      },
+            "numeroUnite": {
+                "description": "Cle unite",
+                "type": "integer"
 
-      "temperatureExterieure":{
-         "description":"temperatureExterieure",
-         "type":"float"
-      },
-      "poidsLait":{
-         "description":"poids laiit supporté exprimé en kg",
-         "type":"float"
-      }
-      # remplir les autres champs , fastidieux , pas le temps
+            },
+        "numéroAutomate": {
+                "description": "Identifiant de l'automate",
+                "type": "integer"
+                },
+        "typeAutomate": {
+                "description": "Identifiant type",
+                "type": "integer"
+                },
+        "temperatureCuve": {
+                "description": "Température de la cuve",
+                "type": "float"
+                },
+
+        "temperatureExterieure": {
+                "description": "Temperature exterieure",
+                "type": "float"
+                },
+        "poidsLait": {
+                "description": "Poids lait supporté exprimé en kg",
+                "type": "float"
+                },
+
+        "poidsProduit": {
+                "description": "Poids du produit fini réalisé",
+                "type": "float"
+                },
+        "mesurePh": {
+                "description": "Mesure du PH",
+                "type": "float"
+                },
+        "mesureK+": {
+                "description": "Mesure du Potassium",
+                "type": "integer"
+                },
+        "concentNacl": {
+                "description": "Mesure de la concentration de sel",
+                "type": "float"
+                },
+        "nivBactSalmo": {
+                "description": "Mesure du niveau bactérien (salmonel)",
+                "type": "integer"
+                },
+        "nivBactColi": {
+                "description": "Mesure du niveau bactérien (E-Coli)",
+                "type": "integer"
+                },
+        "nivBactList": {
+                "description": "Mesure du niveau bactérien (Listéria)",
+                "type": "integer"
+                },
+        # remplir les autres champs , fastidieux , pas le temps
 
 
 
- 	}
+    }
 }
 
 
-
-
-#stocke la strcuture dans un objet inetrmédiaire
+# stocke la strcuture dans un objet inetrmédiaire
 json_dump = json.dumps(Automate)
-
-
