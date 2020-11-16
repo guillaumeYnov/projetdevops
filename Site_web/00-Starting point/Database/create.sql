@@ -3,13 +3,13 @@ create table unite(
     libelle varchar(100) not null,
     primary key(idUnite)
 )
-ENGINE=INNODB;;
+ENGINE=MariaDB;;
 
 create table type(
     idType int auto_increment,
     libelle varchar(100) not null,
     primary key(idType)
-)ENGINE=INNODB;
+)ENGINE=MariaDB;
 
 create table Automate(
     numeroAutomate int auto_increment,
@@ -21,7 +21,7 @@ create table Automate(
     FOREIGN KEY (idUnit) REFERENCES unite (idUnite),
     CONSTRAINT `fk_automate_type`
     FOREIGN KEY (idTp) REFERENCES type (idType)
-)ENGINE=INNODB;
+)ENGINE=MariaDB;
 
 create table Mesure(
 	
@@ -42,4 +42,4 @@ create table Mesure(
     FOREIGN KEY (idAutomot) REFERENCES Automate (numeroAutomate)
 	
 	
-)ENGINE=INNODB;
+)ENGINE=MariaDB;
